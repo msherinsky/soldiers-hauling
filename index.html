@@ -1238,10 +1238,16 @@ window.addEventListener('scroll', () => {
 // Mobile truck scroll-in
 if (window.innerWidth <= 768) {
   const truckEl = document.querySelector('.hero-truck');
-  const truckIO = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { truckEl.classList.add('truck-in'); truckIO.unobserve(truckEl); } });
-  }, { threshold: 0.15 });
-  truckIO.observe(truckEl);
+  let truckFired = false;
+  function checkTruck() {
+    if (truckFired) return;
+    if (truckEl.getBoundingClientRect().top < window.innerHeight * 0.92) {
+      truckFired = true;
+      truckEl.classList.add('truck-in');
+      window.removeEventListener('scroll', checkTruck, {passive: true});
+    }
+  }
+  window.addEventListener('scroll', checkTruck, {passive: true});
 }
 
 // Process line draw
