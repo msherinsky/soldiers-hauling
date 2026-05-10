@@ -318,8 +318,10 @@
     .wg-send:disabled svg { fill: var(--wg-muted); }
     @media (max-width: 480px) {
       #wg-panel { bottom: 0; right: 0; left: 0; width: 100%; max-height: 100dvh; border-radius: 0; }
-      #wg-trigger { bottom: 20px; right: 20px; }
+      #wg-trigger { bottom: calc(20px + env(safe-area-inset-bottom, 0px)); right: 20px; width: 60px; height: 60px; }
       #wg-trigger.wg-open { display: none; }
+      .wg-input-area { padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
+      .wg-send { width: 48px; height: 48px; }
     }
   `;
   document.head.appendChild(style);
