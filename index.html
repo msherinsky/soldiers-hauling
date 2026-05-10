@@ -193,11 +193,16 @@ h3{font-size:clamp(20px,2.5vw,26px)}
   .hout{flex:0 0 50%;padding:16px 20px}
   .hout:nth-child(2n){border-right:none}
   .hout:nth-child(3),.hout:nth-child(4),.hout:nth-child(5){border-top:1px solid rgba(255,255,255,0.06)}
+  .hero-truck{position:relative;right:auto;left:auto;top:auto;bottom:auto;width:100%;height:220px;order:2;object-position:center 35%;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,0.7) 22%,black 48%);mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,0.7) 22%,black 48%);transform:translateX(-110%);animation:none}
+  .hero-truck.truck-in{animation:truckSlideMobile 1250ms cubic-bezier(0.16,1,0.3,1) both}
+  .hero-inner{order:1;padding-bottom:24px}
+  .hero-strip{order:3}
 }
 @media(max-width:480px){
   .hout{flex:0 0 100%;border-right:none!important;border-top:1px solid rgba(255,255,255,0.06)!important}
   .hout:first-child{border-top:none!important}
-  .hero-inner{padding:64px 24px 40px}
+  .hero-inner{padding:64px 24px 24px}
+  .hero-truck{height:190px}
 }
 
 /* PLATFORM TRUST BAR */
@@ -426,6 +431,7 @@ h3{font-size:clamp(20px,2.5vw,26px)}
 
 /* HERO KEYFRAMES */
 @keyframes truckSlide{from{transform:translateX(110%)}to{transform:translateX(0)}}
+@keyframes truckSlideMobile{from{transform:translateX(-110%)}to{transform:translateX(0)}}
 @keyframes radarSweep{0%{transform:translateX(-2px);opacity:.3}88%{transform:translateX(100vw);opacity:.2}100%{transform:translateX(100vw);opacity:0}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 @keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:none}}
@@ -525,6 +531,7 @@ h3{font-size:clamp(20px,2.5vw,26px)}
 @media(prefers-reduced-motion:reduce){
   .reveal{transition:none}
   .hero-truck,.hero-stripe,.hero-stripe-white,.radar-sweep::after,.hero-badge,.hero h1 .hl,.hero-sub,.hero-proof,.hero-btns{animation:none;opacity:1;transform:none}
+  .hero-truck.truck-in{animation:none;transform:none}
   .btn-gold::after,.fcta-phone::before,.stag.tag-in{animation:none}
   .hdr,.hdr-inner{transition:none}
 }
@@ -1227,6 +1234,15 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 window.addEventListener('scroll', () => {
   document.querySelector('.hdr').classList.toggle('scrolled', window.scrollY > 60);
 }, {passive: true});
+
+// Mobile truck scroll-in
+if (window.innerWidth <= 768) {
+  const truckEl = document.querySelector('.hero-truck');
+  const truckIO = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { truckEl.classList.add('truck-in'); truckIO.unobserve(truckEl); } });
+  }, { threshold: 0.15 });
+  truckIO.observe(truckEl);
+}
 
 // Process line draw
 const procIO = new IntersectionObserver(entries => {
