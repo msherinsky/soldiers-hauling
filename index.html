@@ -224,7 +224,8 @@ h3{font-size:clamp(20px,2.5vw,26px)}
 .prob-photo img{width:100%;height:100%;object-fit:cover;display:block;border-radius:2px;box-shadow:0 24px 64px rgba(0,0,0,0.55)}
 .prob-photo-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(13,26,9,0.35) 0%,transparent 28%);border-radius:2px;pointer-events:none}
 .prob-stamp{position:absolute;top:16px;left:16px;font-family:var(--fh);font-size:9px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:rgba(255,255,255,0.55);background:rgba(13,26,9,0.82);padding:6px 12px;border-left:2px solid rgba(200,144,56,0.6)}
-@media(max-width:960px){.prob-inner{grid-template-columns:1fr;gap:40px}.prob-photo{min-height:280px;order:2}}
+@media(max-width:960px){.prob-inner{grid-template-columns:1fr;gap:40px}.prob-photo{min-height:280px;order:2}.prob-cta-desktop{display:none}.prob-cta-mobile{display:block}}
+.prob-cta-mobile{display:none}
 
 
 
@@ -737,13 +738,14 @@ h3{font-size:clamp(20px,2.5vw,26px)}
           </div>
         </div>
         <p class="prob-closer reveal">You don't need more time. You need a team that shows up, handles every piece, and leaves you with a space you can actually use again.</p>
-        <div style="text-align:center;margin-top:28px"><a href="contact.html" class="btn btn-gold btn-lg">Book Your Free Quote →</a></div>
+        <div class="prob-cta-desktop" style="text-align:center;margin-top:28px"><a href="contact.html" class="btn btn-gold btn-lg">Book Your Free Quote →</a></div>
       </div>
       <div class="prob-photo reveal d2">
         <img src="https://soldiershauling.com/wp-content/uploads/2024/03/garage-full-of-junk-hoarder-cleanouts-best-junk-removal-services-near-me-enola-cumberland-perry-pa-soldiers-hauling-1.jpg" alt="Garage packed full of junk before removal — Soldiers Hauling" loading="lazy">
         <div class="prob-photo-overlay"></div>
         <span class="prob-stamp">Before Soldiers Hauling</span>
       </div>
+      <div class="prob-cta-mobile" style="text-align:center;margin-top:8px"><a href="contact.html" class="btn btn-gold btn-lg">Book Your Free Quote →</a></div>
     </div>
   </div>
 </section>
