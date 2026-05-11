@@ -334,14 +334,13 @@ h3{font-size:clamp(20px,2.5vw,26px)}
 }
 
 /* WHY US */
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:var(--max);margin:0 auto}
-.why-item{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:28px 24px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:2px;transition:background 0.18s,border-color 0.18s,transform 0.18s}
-.why-item:hover{background:rgba(255,255,255,0.08);border-color:rgba(200,144,56,0.35);transform:translateY(-2px)}
-.why-icon{width:36px;height:36px;color:var(--gold);flex-shrink:0;margin-bottom:6px;opacity:0.9}
-.why-stat{font-family:var(--fh);font-size:clamp(20px,2.4vw,28px);font-weight:900;color:var(--white);line-height:1.1;letter-spacing:0.01em}
-.why-sub{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.55}
-@media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.why-grid{grid-template-columns:1fr}}
+.why-grid{display:flex;flex-direction:column;max-width:var(--max);margin:0 auto;border-top:1px solid rgba(255,255,255,0.1)}
+.why-item{display:grid;grid-template-columns:36px 1fr auto;align-items:center;gap:0 28px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);background:none;border-radius:0;transition:opacity 0.15s}
+.why-item:hover{background:none;transform:none;opacity:0.8}
+.why-icon{width:26px;height:26px;color:var(--gold);flex-shrink:0;opacity:1;margin-bottom:0}
+.why-stat{font-family:var(--fh);font-size:clamp(17px,2vw,23px);font-weight:900;color:var(--white);line-height:1.1;letter-spacing:0.01em}
+.why-sub{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.5;text-align:right;max-width:340px}
+@media(max-width:700px){.why-item{grid-template-columns:28px 1fr;grid-template-rows:auto auto;row-gap:4px}.why-sub{grid-column:2;text-align:left;max-width:none}}
 
 /* SERVICES */
 .services{background:linear-gradient(to bottom,var(--dark) 0%,var(--forest) 80px,var(--forest) calc(100% - 80px),var(--olive) 100%);padding:var(--sec) 0;border-top:3px solid rgba(200,144,56,0.5)}
@@ -1061,55 +1060,55 @@ h3{font-size:clamp(20px,2.5vw,26px)}
     <div class="why-grid reveal d1">
 
       <div class="why-item">
-        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="13" rx="2"/><polyline points="7 7 12 2 17 7"/></svg>
+        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
         <div class="why-stat">Discovery Channel</div>
         <div class="why-sub">Featured on Filthy Fortunes, Season 2</div>
       </div>
 
       <div class="why-item">
-        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
         <div class="why-stat">Licensed &amp; Insured</div>
         <div class="why-sub">PA LLC since 2021. Every job fully covered.</div>
       </div>
 
       <div class="why-item">
-        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
         <div class="why-stat">BBB A+ Rating</div>
         <div class="why-sub">Zero complaints filed. Ever.</div>
       </div>
 
       <div class="why-item">
-        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
         <div class="why-stat">20+ Army Years</div>
         <div class="why-sub">Nick Costill. Discipline you feel on every job.</div>
       </div>
 
       <div class="why-item">
-        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.08 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.75A16 16 0 0 0 16 16.09l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 24 16.92z"/></svg>
+        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
         <div class="why-stat">Shannon Answers</div>
         <div class="why-sub">Real person picks up. No bots, no callbacks.</div>
       </div>
 
       <div class="why-item">
-        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
-        <div class="why-stat">Owner on Every Job</div>
-        <div class="why-sub">Nick personally runs every crew. Always.</div>
+        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <div class="why-stat">Nick's Standard, Every Time</div>
+        <div class="why-sub">He built the system. Every crew follows it.</div>
       </div>
 
       <div class="why-item">
-        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
         <div class="why-stat">Handwritten Thank-You</div>
         <div class="why-sub">Shannon mails one after every job. By hand. Not a template.</div>
       </div>
 
       <div class="why-item">
-        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
         <div class="why-stat">Vet + Women Owned</div>
         <div class="why-sub">Dual-certified. One of very few in PA.</div>
       </div>
 
       <div class="why-item">
-        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <svg class="why-icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
         <div class="why-stat">Zero No-Shows</div>
         <div class="why-sub">Military punctuality. They show up. Every time.</div>
       </div>
