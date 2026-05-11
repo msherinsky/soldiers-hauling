@@ -34,8 +34,7 @@
   --dark:     #1b3813;
   --olive:    #243d1a;
   --forest:   #2d521f;
-  --sage:     #3a6b2f;
-  --sage-mid: #4d8041;
+
   --mint:     #eaf4e4;
   --white:    #ffffff;
   --gold:     #c89038;
@@ -74,8 +73,7 @@ h3{font-size:clamp(22px,2.8vw,32px)}
 .btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .btn-gold{background:var(--gold);color:var(--black);border-color:var(--gold);position:relative;overflow:hidden}
 .btn-gold:hover{background:var(--gold-lt);border-color:var(--gold-lt);transform:translateY(-1px);box-shadow:0 4px 16px rgba(200,144,56,0.4)}
-.btn-green{background:var(--sage);color:var(--white);border-color:var(--sage)}
-.btn-green:hover{background:var(--sage-mid);border-color:var(--sage-mid);transform:translateY(-1px)}
+
 .btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,0.35)}
 .btn-outline:hover{background:var(--white);color:var(--dark);border-color:var(--white);transform:translateY(-1px)}
 .btn-lg{padding:18px 38px;font-size:15px}
@@ -712,7 +710,7 @@ h3{font-size:clamp(22px,2.8vw,32px)}
         </ul>
       </div>
       <div class="fcol">
-        <h5>Business Info</h5>
+        <h3>Business Info</h3>
         <ul class="fct">
           <li><strong>Phone:</strong> <a href="tel:7176081283">717-608-1283</a></li>
           <li><strong>Email:</strong> <a href="mailto:soldiershauling@gmail.com">soldiershauling@gmail.com</a></li>
@@ -753,7 +751,7 @@ document.addEventListener('click', e => {
   }
 });
 document.querySelectorAll('.nav-dd > a').forEach(a => {
-  a.addEventListener('click', e => {
+  a.addEventListener('click', () => {
     const dd = a.closest('.nav-dd');
     const wasOpen = dd.classList.contains('open');
     document.querySelectorAll('.nav-dd').forEach(d => d.classList.remove('open'));
