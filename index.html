@@ -116,7 +116,7 @@ h3{font-size:clamp(20px,2.5vw,26px)}
 .trust-divider{overflow:hidden;position:relative;z-index:1}
 .trust-divider__gold{background:linear-gradient(90deg,var(--gold-dk) 0%,var(--gold) 40%,var(--gold-lt) 60%,var(--gold) 100%);padding:16px 0;border-top:2px solid rgba(255,255,255,0.18);border-bottom:1px solid rgba(0,0,0,0.15);box-shadow:0 2px 14px rgba(168,116,40,0.5)}
 .trust-divider__green{background:linear-gradient(90deg,var(--gold-dk) 0%,var(--gold) 40%,var(--gold-lt) 60%,var(--gold) 100%);padding:16px 0;border-top:1px solid rgba(0,0,0,0.18);border-bottom:2px solid rgba(0,0,0,0.2)}
-.td-track{display:flex;align-items:center;width:max-content;white-space:nowrap;will-change:transform}
+.td-track{display:flex;align-items:center;width:max-content;white-space:nowrap;will-change:transform;transform:translateZ(0)}
 .td-track--left{animation:tickerScroll 30s linear infinite reverse}
 .td-track--right{animation:tickerScroll 30s linear infinite reverse}
 .td-item{display:inline-flex;align-items:center;padding:0 22px;font-size:13px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap}
@@ -200,7 +200,6 @@ h3{font-size:clamp(20px,2.5vw,26px)}
   .hero-truck{position:relative;right:auto;left:auto;top:auto;bottom:auto;width:100%;height:220px;order:2;object-position:center 35%;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,0.7) 22%,black 48%);mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,0.7) 22%,black 48%);transform:translateX(110%);animation:none}
   .hero-truck.truck-in{animation:truckSlideMobile 1250ms cubic-bezier(0.16,1,0.3,1) both}
   .hero-inner{order:1;padding-bottom:24px}
-  .hero .trust-divider{order:3}
 }
 @media(max-width:480px){
   .hero-inner{padding:64px 24px 24px}
@@ -629,6 +628,7 @@ h3{font-size:clamp(20px,2.5vw,26px)}
     </div>
     <p class="hero-phone-alt">Or call us directly: <a href="tel:7176081283">717-608-1283</a></p>
   </div>
+</section>
   <!-- TRUST DIVIDER -->
   <div class="trust-divider" role="marquee" aria-label="Trust signals and credentials">
     <div class="trust-divider__gold">
@@ -696,7 +696,9 @@ h3{font-size:clamp(20px,2.5vw,26px)}
       </div>
     </div>
   </div>
-</section>
+
+
+
 
 
 <!-- PROBLEM -->
